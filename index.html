@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Management System | Vision Document & Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #1e3a5f 0%, #112240 100%); }
+        .teal-accent { color: #3b9b8e; }
+        .teal-bg { background-color: #3b9b8e; }
+        .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; box-shadow: 0 10px 25px rgba(59, 155, 142, 0.2); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Hero Section (Project Vision) -->
+    <header class="gradient-bg text-white py-20 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <span class="teal-bg text-white text-sm font-bold tracking-wider py-1 px-3 rounded-full uppercase">Vision Document & Architecture</span>
+            <h1 class="text-4xl md:text-5xl font-bold mt-6 mb-4">Restaurant Management System</h1>
+            <p class="text-lg md:text-xl text-slate-300 italic mb-6">
+                "To build a robust, user-friendly, and cost-effective digital solution that streamlines restaurant operations from order taking to final billing."
+            </p>
+            <div class="text-xs text-teal-300 tracking-wide uppercase font-semibold mb-8">
+                Lead Front-End Architect: <span class="text-white underline">Fasiha Muzzammil</span> (fasihacodes)
+            </div>
+            <div>
+                <a href="#scope" class="teal-bg hover:bg-teal-600 text-white font-semibold py-3 px-8 rounded shadow-lg transition duration-300">
+                    Explore Project Scope
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section 1: The Problem & Objectives (Presenter 1) -->
+    <section class="py-16 px-6 max-w-6xl mx-auto" id="overview">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-[#1e3a5f]">Why Build This System?</h2>
+            <div class="w-16 h-1 teal-bg mx-auto mt-4"></div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-10">
+            <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-[#1e3a5f]">
+                <h3 class="text-xl font-bold mb-4 teal-accent">The Current Problems</h3>
+                <ul class="space-y-3 text-slate-600">
+                    <li class="flex items-start"><span class="mr-2">❌</span> Manual paper-based order taking causes errors.</li>
+                    <li class="flex items-start"><span class="mr-2">❌</span> Miscommunication between waiters and kitchen staff.</li>
+                    <li class="flex items-start"><span class="mr-2">❌</span> Slow billing process during rush hours.</li>
+                    <li class="flex items-start"><span class="mr-2">❌</span> Difficulty in tracking daily sales and inventory.</li>
+                </ul>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-[#3b9b8e]">
+                <h3 class="text-xl font-bold mb-4 teal-accent">Core Objectives</h3>
+                <ul class="space-y-3 text-slate-600">
+                    <li class="flex items-start"><span class="mr-2">✅</span> Automate order processing for faster service.</li>
+                    <li class="flex items-start"><span class="mr-2">✅</span> Provide 100% accurate, calculated bills.</li>
+                    <li class="flex items-start"><span class="mr-2">✅</span> Enable real-time communication with the kitchen.</li>
+                    <li class="flex items-start"><span class="mr-2">✅</span> Maintain a reliable digital record of operations.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Stakeholders & Role-Based Access Control (Fasiha's Section) -->
+    <section class="py-16 px-6 bg-slate-100" id="requirements">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-[#1e3a5f]">Stakeholders & Role-Based Access (RBAC)</h2>
+                <div class="w-16 h-1 teal-bg mx-auto mt-4"></div>
+                <p class="mt-4 text-slate-600">Requirements gathered through structured staff interviews by Fasiha Muzzammil.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                <div class="bg-white p-6 rounded-lg shadow-sm card-hover text-center border border-slate-200">
+                    <div class="text-3xl mb-3">👨‍💼</div>
+                    <h4 class="font-bold text-[#1e3a5f]">Owner / Manager</h4>
+                    <p class="text-xs text-slate-500 mt-2">Full Admin Access. Focus on reports & menu updates.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm card-hover text-center border border-slate-200">
+                    <div class="text-3xl mb-3">🧑‍🍳</div>
+                    <h4 class="font-bold text-[#1e3a5f]">Kitchen Staff</h4>
+                    <p class="text-xs text-slate-500 mt-2">Restricted Access. Focus on incoming live orders.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm card-hover text-center border border-slate-200">
+                    <div class="text-3xl mb-3">📝</div>
+                    <h4 class="font-bold text-[#1e3a5f]">Order Taker</h4>
+                    <p class="text-xs text-slate-500 mt-2">Restricted Access. Focus on fast table data entry.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm card-hover text-center border border-slate-200">
+                    <div class="text-3xl mb-3">💰</div>
+                    <h4 class="font-bold text-[#1e3a5f]">Cashier</h4>
+                    <p class="text-xs text-slate-500 mt-2">Billing Access. Focus on payment processing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Project Scope & Iterations -->
+    <section class="py-16 px-6 max-w-6xl mx-auto" id="scope">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-[#1e3a5f]">Project Scope & Iterations</h2>
+            <div class="w-16 h-1 teal-bg mx-auto mt-4"></div>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- First Iteration -->
+            <div class="md:w-1/2 bg-[#1e3a5f] text-white p-8 rounded-xl shadow-lg">
+                <span class="bg-teal-500 text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wide">First Iteration</span>
+                <h3 class="text-2xl font-bold mt-4 mb-6">Core Functional Scope</h3>
+                <div class="space-y-4">
+                    <div class="border-l-4 border-teal-400 pl-4">
+                        <h4 class="font-bold text-teal-300">1. Order Management</h4>
+                        <p class="text-sm text-slate-300">Digital table orders synced directly to the kitchen display.</p>
+                    </div>
+                    <div class="border-l-4 border-teal-400 pl-4">
+                        <h4 class="font-bold text-teal-300">2. Menu Management</h4>
+                        <p class="text-sm text-slate-300">Digital catalog with real-time item pricing and status updates.</p>
+                    </div>
+                    <div class="border-l-4 border-teal-400 pl-4">
+                        <h4 class="font-bold text-teal-300">3. Billing & Payments</h4>
+                        <p class="text-sm text-slate-300">Automated invoice generation and payment logging.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Out of Scope -->
+            <div class="md:w-1/2 bg-white p-8 rounded-xl shadow-lg border border-slate-200">
+                <span class="bg-red-100 text-red-600 text-xs font-bold px-2 py-1 rounded uppercase tracking-wide">Out of Boundary</span>
+                <h3 class="text-2xl font-bold mt-4 mb-6 text-[#1e3a5f]">What We Are NOT Building</h3>
+                <ul class="space-y-4 text-slate-600">
+                    <li class="flex items-center"><span class="w-2 h-2 rounded-full bg-red-400 mr-3"></span> Third-party delivery app integrations (Foodpanda)</li>
+                    <li class="flex items-center"><span class="w-2 h-2 rounded-full bg-red-400 mr-3"></span> Employee Payroll & Salary Management</li>
+                    <li class="flex items-center"><span class="w-2 h-2 rounded-full bg-red-400 mr-3"></span> Multi-branch cloud database synchronization</li>
+                    <li class="flex items-center"><span class="w-2 h-2 rounded-full bg-red-400 mr-3"></span> Online customer portal table reservations</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Workflow & Business Impact -->
+    <section class="py-16 px-6 bg-slate-100">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-[#1e3a5f]">Expected Business Impact</h2>
+            <div class="w-16 h-1 teal-bg mx-auto mt-4 mb-10"></div>
+            
+            <div class="grid sm:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm border-t-2 border-[#1e3a5f]">
+                    <h4 class="font-bold text-lg text-[#1e3a5f] mb-2">Cost & Wastage Control</h4>
+                    <p class="text-sm text-slate-600">Accurate inventory tracking reduces food wastage and operational overhead.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm border-t-2 border-[#1e3a5f]">
+                    <h4 class="font-bold text-lg text-[#1e3a5f] mb-2">Revenue Growth</h4>
+                    <p class="text-sm text-slate-600">Faster table turnaround and error-free billing directly increase net profits.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm border-t-2 border-[#1e3a5f]">
+                    <h4 class="font-bold text-lg text-[#1e3a5f] mb-2">Better Decisions</h4>
+                    <p class="text-sm text-slate-600">Management receives clear analytics on best-selling items and peak hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white text-center py-6 mt-10">
+        <p class="text-sm text-slate-400">Developed by Fasiha Muzzammil (fasihacodes) | Software Engineering Vision Project</p>
+        <p class="text-xs text-teal-400 mt-1">Ready for Submission & Presentation</p>
+    </footer>
+
+</body>
+</html>
